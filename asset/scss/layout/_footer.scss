@@ -1,0 +1,181 @@
+footer {
+    background-color: #193741;
+    color: #fbf3e7;
+    padding: 100px 0 100px;
+    box-sizing: border-box;
+
+
+    .inner {
+        display: flex;
+    }
+
+    .logo-area {
+        display: flex;
+        width: 66%;
+        padding: 0 10px 0;
+        align-items: center;
+
+        .footer-logo {
+            background-image: url(../images/BelA_Chalet_logo_beige.svg);
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            height: 100px;
+            width: 100%;
+            max-width: 120px;
+            margin-top: -10px;
+            margin-right: 5vw;
+        }
+    }
+    .author-area {
+        font-family: 'Open Sans', sans-serif;
+
+        .opentime {
+            display: flex;
+            color: #eac486;
+            font-size: 24px;
+            line-height: 29px;
+            font-weight: 400;
+
+            &.active .arrow {
+                width: 30px;
+                margin-right: 15px;
+                margin-bottom: 4px;
+                opacity: 1;
+            }
+
+            .arrow {
+                display: flex;
+                align-items: center;
+                opacity: 0;
+                width: 0;
+                transition: all 0.3s;
+
+                img {
+                    width: 30px;
+                }
+            }
+        }
+        p {
+            display: block;
+            color: #eac486;
+            font-size: 24px;
+            line-height: 29px;
+            font-weight: 400;
+            margin: 10px 0 10px;
+        }
+    }
+    .sns-area {
+        padding: 0 10px 0;
+        box-sizing: border-box;
+        width: 16%;
+
+        .area-title {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 12px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+            display: block;
+        }
+        .sns-list {
+            display: flex;
+            flex-wrap: wrap;
+            grid-column-gap: 8px;
+            grid-row-gap: 8px;
+            
+
+            a {
+                display: inline-block;
+                border: 1px solid rgba(251,243,231,.5);
+                border-radius: 40%;
+                width: 44px;
+                height: 44px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                transition: all 0.5s;
+
+                &:hover {
+                    transform: scale(1.1);
+                }
+
+                img {
+                    height: 70%;
+                    object-fit: cover;
+                }
+            }
+        }
+    }
+    .infor-area {
+        padding: 0 10px 0;
+        box-sizing: border-box;
+        width: 16%;
+        font-family: 'Open Sans', sans-serif;
+
+        .area-title {
+            font-size: 12px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        a {
+            color: #fbf3e7;
+            font-size: 12px;
+            line-height: 30px;
+            display: block;
+
+            &:hover {
+                opacity: 0.6;
+            }
+        }
+    }
+}
+@media screen and (max-width: 959px) { 
+    footer {
+        .inner {
+            display: block;
+            width: 90vw;
+        }
+        .logo-area {
+            display: block;
+            white-space: nowrap;
+
+            .footer-logo {
+                margin-bottom: 40px;
+            }
+        }
+        .sns-area {
+            margin-top: 40px;
+
+            .sns-list { 
+                flex-wrap: nowrap;
+            }
+        }
+        .infor-area { 
+            margin-top: 40px;
+            white-space: nowrap;
+
+            a {
+                line-height: 25px;
+            }
+        }
+    }
+}
+@media screen and (max-width: 767px) {
+    footer {
+        .author-area {
+            p {
+                font-size: 15px;
+                margin: 0;
+            }
+            .opentime {
+                font-size: 15px;
+            }
+        }
+    }
+    
+
+
+}

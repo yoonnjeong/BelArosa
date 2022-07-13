@@ -1,0 +1,176 @@
+.blind {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    margin: -1px;
+    
+}
+body {
+    margin: 0;
+    min-height: 100%;
+    background-color: #fff;
+    font-family: 'Open Sans', sans-serif;
+    color: #000;
+    font-size: 14px;
+    line-height: 20px;
+}
+.cursor {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10000;
+
+    .green-cir {
+        position: absolute;
+        left: 0;
+        top: 0;
+        transform: translate(-50%,-50%);
+        display: block;
+        width: 140px;
+        height: 140px;
+        pointer-events: none;
+        opacity: 1;
+
+        &.hide {
+            opacity: 0;
+        }
+
+        .ani {
+            animation: spin 10s linear infinite;
+        }
+
+        .ig-wrap {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+        }
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+    .cir {
+        position: absolute;
+        left: 0;
+        top: 0;
+        transform: translate(-50%,-50%);
+        width: 50px;
+        height: 50px;
+        display: block;
+        border: 1.5px solid hsl(36, 73%, 76%);
+        border-radius: 50%;
+        pointer-events: none;
+        opacity: 1;
+
+        &.hide {
+            opacity: 0;
+        }
+        &.active {
+            width: 10px;
+            height: 10px;
+            background:hsl(36, 73%, 76%);
+        }
+    }
+}
+
+br.none-mo {
+    display: none;
+}
+// .rotate-bg {
+//     position: absolute;
+//     left: 0;
+//     top: 0;
+//     right: 0;
+//     bottom: 0;
+//     z-index: 10000;
+//     background-color: #193741;
+//     width: 100%;
+//     height: 100vh;
+//     display: none;
+
+//     &.none {
+//         display: flex;
+//     }
+//     .rotate-wrap {
+//         display: flex;
+//         margin-right: auto;
+//         margin-left: auto;
+//         align-items: center;
+
+//         img {
+//             width: 80px;
+//             height: 80px;
+//             margin-right: 40px;
+//         }
+//         .desc {
+//             font-size: 16px;
+//             line-height: 28px;
+//             color: #fbf3e7;
+//         }
+
+//     }
+// }
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+.title{
+        color: #193741;
+        font-size: 40px;
+        line-height: 52px;
+        font-weight: 500;
+        text-align: center;
+        font-family: 'IBM Plex Serif', serif;
+        white-space: nowrap;
+
+        &.bei {
+            color: #fbf3e7;
+        }
+}
+
+@media screen and (max-width: 959px) {
+    .title {
+        font-size: 35px;
+        bottom: 17%;
+    }
+
+}
+@media screen and (max-width: 767px) {
+    .title {
+        font-size: 20px;
+        line-height: 1.5;
+
+    }
+    br {
+        display: none;
+
+        &.none-mo {
+            display: block;
+        }
+    }
+    .cursor {
+        display: none;
+    }
+}
+.wood-bottom {
+    height: 120px;
+    border-top: 2px solid #7d5c47;
+    background-color: #412815;
+    background-image: url(../images/Bel_Balken_Textur_1920_04.jpg);
+    background-position: 50% 50%;
+    background-size: cover;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+.inner {
+    width: 80vw;
+    margin-left: auto;
+    margin-right: auto;
+}
