@@ -822,8 +822,8 @@ $(function(){
         // all 
         "all": function() {
 
-            gsap.to('.green-loading img',{opacity:0,duration:.5,onComplete:function(){
-                gsap.to('.green-loading',{yPercent:-100,duration:.5});
+            gsap.to('.green-loading img',{opacity:0,duration:1, onComplete:function(){
+                gsap.to('.green-loading',{yPercent:-100,duration:1});
             }});
             // gsap.to('.green-loading',{yPercent:-100,duration:1});
           
