@@ -10,17 +10,6 @@ $(function(){
     );
 
 
-    // last = 0;
-    // $(window).scroll(function(){
-    //     curr = $(this).scrollTop();
-    //     // console.log(curr);
-
-    //     if(curr > last){
-    //         console.log('1111');
-    //     }else{
-    //         console.log('222');
-    //     }
-    // })
 
 
     $('header .btn-menu').click(function(){
@@ -527,7 +516,7 @@ $(function(){
             .to('header .up',{yPercent:-300},'m1')
             .from('.ig-title',{scale: 9.5,top:'45%',left:'40%',duration:0.6},'m1')
             .from('.sc-main .mount img',{width: '230vw',yPercent:-20,x:'-70vw'},'m1')
-            .fromTo('.sc-main .title',{opacity:0},{yPercent:-150,opacity:1,},'m1+=0.4')
+            .fromTo('.sc-main .title',{opacity:0},{yPercent:-120,opacity:1,},'m1+=0.4')
             .addLabel('m2')
             .to('.sc-main .title',{opacity:0,duration:0.4},'m2-=0.1',)
             // .to('.sc-main .women',{scale:1.5,xPercent:0,yPercent:-20},'m2-=0.1')
@@ -902,26 +891,22 @@ $(function(){
             $('header .down').removeClass('on');
         }
     });
-    // $(window).resize(function(){
-    //     // width값을 가져오기
-    //     var width_size = window.outerWidth;
+    $(window).resize(function(){
+        // width값을 가져오기
+        var width_size = window.outerWidth;
         
-    //     // 800 이하인지 if문으로 확인
-    //     if (width_size < 767) {
-    //       $('.rotate-bg').addClass('none');
-    //       $('body').addClass('active');
-
-    //       if(isMobile){
-    //         $('.rotate-bg').removeClass('none');
-    //         $('body').removeClass('active');
-    //       }
-          
-    //     } else {
-    //       $('.rotate-bg').removeClass('none');
-    //       $('body').removeClass('active');
-    //     }
-    // })
-    // $(window).trigger('resize');
+        if (width_size = 1025) {
+          location.reload();
+        } else if(width_size = 959){
+            location.reload();
+        }else if(width_size = 767){
+            location.reload();
+        }else if(width_size = 580){
+            location.reload();
+        }else if(width_size = 579){
+            location.reload();
+        }
+    })
     
     
 })

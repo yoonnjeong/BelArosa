@@ -1339,7 +1339,7 @@ main {
   left: 50%;
   top: 40%;
   z-index: 10;
-  transform: translateX(-50%);
+  transform: translate(-50%, -20%);
 }
 .sc-couple .window-mount {
   position: absolute;
