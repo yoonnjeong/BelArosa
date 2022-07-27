@@ -394,7 +394,7 @@ main {
             bottom: 30%;
 
             img {
-                width: 100%;
+                width: 90%;
             }
         }
     }
@@ -555,7 +555,8 @@ main {
             right: -10%;
 
             img {
-                height: 100vh;
+                height: 120vh;
+                width: 74vw;
             }
         }
     }
@@ -886,15 +887,15 @@ main {
             left: -10%;
             width: 120%;
             img:nth-of-type(1) {
-                display: none;
+                // display: none;
             }
             img:nth-of-type(2) {
-                display: block;
+                // display: block;
             }
         }
         .window-mount {
             left: 46%;
-            top: 30%;
+            top: 50%;
             width: 74%;
         }
         .left-women {
@@ -905,7 +906,7 @@ main {
             }
         }
         .right-man {
-            top: 23%;
+            // top: 23%;
             left: 50%;
 
             img {
@@ -922,7 +923,17 @@ main {
 }
 @media screen and (max-width: 579px) {
     .sc-couple {
-
+        .back-window {
+            img:nth-of-type(1) {
+                display: none;
+            }
+            img:nth-of-type(2) {
+                display: block;
+            }
+        }
+        .window-mount {
+            top: 40%;
+        }
         .left-women {
             left: -80%;
 
@@ -1107,7 +1118,7 @@ main {
                 object-fit: cover;
 
                 &:nth-child(1) {
-                    display: none;
+                    // display: none;
                 }
             }
         }

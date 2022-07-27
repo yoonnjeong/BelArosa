@@ -893,19 +893,8 @@ $(function(){
     });
     $(window).resize(function(){
         // width값을 가져오기
-        var width_size = window.outerWidth;
-        
-        if (width_size = 1025) {
+        // var width_size = window.outerWidth;
           location.reload();
-        } else if(width_size = 959){
-            location.reload();
-        }else if(width_size = 767){
-            location.reload();
-        }else if(width_size = 580){
-            location.reload();
-        }else if(width_size = 579){
-            location.reload();
-        }
     })
     
     
