@@ -897,6 +897,6 @@ $(function(){
           location.reload();
     })
     
-    
+    document.body.style.overscrollBehaviorY = 'none';
 })
 
