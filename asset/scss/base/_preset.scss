@@ -16,6 +16,9 @@ body {
     font-size: 14px;
     line-height: 20px;
 }
+html, body {
+    overscroll-behavior: contain;
+}
 .cursor {
     position: fixed;
     top: 0;

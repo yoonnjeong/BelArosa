@@ -85,6 +85,11 @@ body {
   line-height: 20px;
 }
 
+html, body {
+  -ms-scroll-chaining: none;
+      overscroll-behavior: contain;
+}
+
 .cursor {
   position: fixed;
   top: 0;
