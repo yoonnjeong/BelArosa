@@ -25,7 +25,7 @@ html, body {
     left: 0;
     z-index: 10000;
 
-    .green-cir {
+    .green-circle {
         position: absolute;
         left: 0;
         top: 0;
@@ -40,7 +40,7 @@ html, body {
             opacity: 0;
         }
 
-        .ani {
+        .animation {
             animation: spin 10s linear infinite;
         }
 
@@ -56,7 +56,7 @@ html, body {
             height: 100%;
         }
     }
-    .cir {
+    .circle {
         position: absolute;
         left: 0;
         top: 0;

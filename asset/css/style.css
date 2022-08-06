@@ -96,7 +96,7 @@ html, body {
   left: 0;
   z-index: 10000;
 }
-.cursor .green-cir {
+.cursor .green-circle {
   position: absolute;
   left: 0;
   top: 0;
@@ -107,25 +107,25 @@ html, body {
   pointer-events: none;
   opacity: 1;
 }
-.cursor .green-cir.hide {
+.cursor .green-circle.hide {
   opacity: 0;
 }
-.cursor .green-cir .ani {
+.cursor .green-circle .animation {
   -webkit-animation: spin 10s linear infinite;
           animation: spin 10s linear infinite;
 }
-.cursor .green-cir .ig-wrap {
+.cursor .green-circle .ig-wrap {
   position: absolute;
   left: 0;
   top: 0;
   width: 100%;
   height: 100%;
 }
-.cursor .green-cir img {
+.cursor .green-circle img {
   width: 100%;
   height: 100%;
 }
-.cursor .cir {
+.cursor .circle {
   position: absolute;
   left: 0;
   top: 0;
@@ -138,10 +138,10 @@ html, body {
   pointer-events: none;
   opacity: 1;
 }
-.cursor .cir.hide {
+.cursor .circle.hide {
   opacity: 0;
 }
-.cursor .cir.active {
+.cursor .circle.active {
   width: 10px;
   height: 10px;
   background: hsl(36deg, 73%, 76%);
@@ -246,7 +246,7 @@ header .dimmed.active {
   width: calc(100vw + 40px);
   height: calc(100vh + 40px);
 }
-header .up {
+header .top-menu {
   position: absolute;
   top: 30px;
   left: 40px;
@@ -256,22 +256,22 @@ header .up {
   align-items: start;
   z-index: 100;
 }
-header .up a.btn-reser.on {
+header .top-menu a.btn-reservation.on {
   background-color: #193741;
   border: 1px solid #193741;
 }
-header .up a.active .arrow {
+header .top-menu a.active .arrow {
   opacity: 1;
   margin-right: 10px;
 }
-header .up a.btn-reser {
+header .top-menu a.btn-reservation {
   padding: 12px 20px 12px 10px;
   border: 1px solid #fbf3e7;
   border-radius: 100px;
   display: flex;
   align-items: center;
 }
-header .up a .arrow {
+header .top-menu a .arrow {
   width: 13px;
   height: 13px;
   display: block;
@@ -279,12 +279,12 @@ header .up a .arrow {
   opacity: 0;
   transition: all 0.3s;
 }
-header .up a .arrow img {
+header .top-menu a .arrow img {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
-header .up a .txt {
+header .top-menu a .txt {
   font-size: 12px;
   letter-spacing: 1px;
   font-family: "Open Sans", sans-serif;
@@ -292,34 +292,34 @@ header .up a .txt {
   line-height: 12px;
   font-weight: 600;
 }
-header .up .btn-menu {
+header .top-menu .btn-menu {
   display: inline-block;
   position: relative;
   z-index: 100;
 }
-header .up .btn-menu.active .gnb-close {
+header .top-menu .btn-menu.active .gnb-close {
   opacity: 1;
 }
-header .up .btn-menu.active .text {
+header .top-menu .btn-menu.active .text {
   opacity: 0;
 }
-header .up .btn-menu.active .bar:first-child {
+header .top-menu .btn-menu.active .bar:first-child {
   transform: rotate(45deg) translateY(17px);
 }
-header .up .btn-menu.active .bar:nth-child(2) {
+header .top-menu .btn-menu.active .bar:nth-child(2) {
   opacity: 0;
 }
-header .up .btn-menu.active .bar:last-child {
+header .top-menu .btn-menu.active .bar:last-child {
   transform: rotate(-45deg) translateY(-17px);
 }
-header .up .btn-menu .tab {
+header .top-menu .btn-menu .tab {
   display: inline-block;
   vertical-align: middle;
   position: relative;
   width: 30px;
   height: 30px;
 }
-header .up .btn-menu .tab .bar {
+header .top-menu .btn-menu .tab .bar {
   width: 30px;
   height: 2px;
   background-color: #fbf3e7;
@@ -327,20 +327,20 @@ header .up .btn-menu .tab .bar {
   transition: all 0.3s;
   transition-delay: 0.3s;
 }
-header .up .btn-menu .tab .bar:first-child {
+header .top-menu .btn-menu .tab .bar:first-child {
   top: 2px;
   left: 0;
 }
-header .up .btn-menu .tab .bar:nth-child(2) {
+header .top-menu .btn-menu .tab .bar:nth-child(2) {
   top: 50%;
   transform: translateY(-50%);
   left: 0;
 }
-header .up .btn-menu .tab .bar:last-child {
+header .top-menu .btn-menu .tab .bar:last-child {
   bottom: 2px;
   left: 0;
 }
-header .up .btn-menu .text {
+header .top-menu .btn-menu .text {
   margin-right: 10px;
   font-family: "Open Sans", sans-serif;
   color: #fbf3e7;
@@ -350,7 +350,7 @@ header .up .btn-menu .text {
   vertical-align: middle;
   font-weight: 600;
 }
-header .up .btn-menu .gnb-close {
+header .top-menu .btn-menu .gnb-close {
   position: absolute;
   right: 45px;
   top: 50%;
@@ -362,7 +362,7 @@ header .up .btn-menu .gnb-close {
   font-weight: 500;
   opacity: 0;
 }
-header .down {
+header .menu-fix {
   position: absolute;
   top: 30px;
   left: 40px;
@@ -374,13 +374,13 @@ header .down {
   opacity: 0;
   transition: opacity 0.3s;
 }
-header .down.on {
+header .menu-fix.on {
   pointer-events: all;
   opacity: 1;
 }
-header .down .logo {
+header .menu-fix .logo {
   height: 80px;
-  width: 100%;
+  width: 110px;
   position: absolute;
   top: 0px;
   left: 50%;
@@ -389,11 +389,11 @@ header .down .logo {
   background-size: 100% 100%;
   background-repeat: no-repeat;
 }
-header .down a.active .arrow {
+header .menu-fix a.active .arrow {
   opacity: 1;
   margin-right: 10px;
 }
-header .down a.btn-reser {
+header .menu-fix a.btn-reservation {
   padding: 12px 20px 12px 10px;
   background-color: #193741;
   border: 1px solid #193741;
@@ -402,7 +402,7 @@ header .down a.btn-reser {
   align-items: center;
   z-index: 10;
 }
-header .down a .arrow {
+header .menu-fix a .arrow {
   width: 13px;
   height: 13px;
   display: block;
@@ -410,12 +410,12 @@ header .down a .arrow {
   opacity: 0;
   transition: all 0.3s;
 }
-header .down a .arrow img {
+header .menu-fix a .arrow img {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
-header .down a .txt {
+header .menu-fix a .txt {
   font-size: 12px;
   letter-spacing: 1px;
   font-family: "Open Sans", sans-serif;
@@ -423,34 +423,34 @@ header .down a .txt {
   line-height: 12px;
   font-weight: 600;
 }
-header .down .btn-menu {
+header .menu-fix .btn-menu {
   display: inline-block;
   position: relative;
   z-index: 100;
 }
-header .down .btn-menu.active .gnb-close {
+header .menu-fix .btn-menu.active .gnb-close {
   opacity: 1;
 }
-header .down .btn-menu.active .text {
+header .menu-fix .btn-menu.active .text {
   opacity: 0;
 }
-header .down .btn-menu.active .bar:first-child {
+header .menu-fix .btn-menu.active .bar:first-child {
   transform: rotate(45deg) translateY(17px);
 }
-header .down .btn-menu.active .bar:nth-child(2) {
+header .menu-fix .btn-menu.active .bar:nth-child(2) {
   opacity: 0;
 }
-header .down .btn-menu.active .bar:last-child {
+header .menu-fix .btn-menu.active .bar:last-child {
   transform: rotate(-45deg) translateY(-17px);
 }
-header .down .btn-menu .tab {
+header .menu-fix .btn-menu .tab {
   display: inline-block;
   vertical-align: middle;
   position: relative;
   width: 30px;
   height: 30px;
 }
-header .down .btn-menu .tab .bar {
+header .menu-fix .btn-menu .tab .bar {
   width: 30px;
   height: 2px;
   background-color: #fbf3e7;
@@ -458,20 +458,20 @@ header .down .btn-menu .tab .bar {
   transition: all 0.3s;
   transition-delay: 0.3s;
 }
-header .down .btn-menu .tab .bar:first-child {
+header .menu-fix .btn-menu .tab .bar:first-child {
   top: 2px;
   left: 0;
 }
-header .down .btn-menu .tab .bar:nth-child(2) {
+header .menu-fix .btn-menu .tab .bar:nth-child(2) {
   top: 50%;
   transform: translateY(-50%);
   left: 0;
 }
-header .down .btn-menu .tab .bar:last-child {
+header .menu-fix .btn-menu .tab .bar:last-child {
   bottom: 2px;
   left: 0;
 }
-header .down .btn-menu .text {
+header .menu-fix .btn-menu .text {
   margin-right: 10px;
   font-family: "Open Sans", sans-serif;
   color: #fbf3e7;
@@ -481,7 +481,7 @@ header .down .btn-menu .text {
   vertical-align: middle;
   font-weight: 600;
 }
-header .down .btn-menu .gnb-close {
+header .menu-fix .btn-menu .gnb-close {
   position: absolute;
   right: 45px;
   top: 50%;
@@ -614,36 +614,37 @@ header .down .btn-menu .gnb-close {
   header {
     padding: 40px 15px 0;
   }
-  header .up {
+  header .top-menu {
     left: 15px;
     right: 15px;
     flex-direction: row-reverse;
   }
-  header .up a.btn-reser {
+  header .top-menu a.btn-reservation {
     display: none;
   }
-  header .up .btn-menu .text {
+  header .top-menu .btn-menu .text {
     display: none;
   }
-  header .up .btn-menu .gnb-close {
+  header .top-menu .btn-menu .gnb-close {
     display: none;
   }
-  header .down {
+  header .menu-fix {
     left: 15px;
     right: 15px;
     flex-direction: row-reverse;
   }
-  header .down .logo {
+  header .menu-fix .logo {
     height: 60px;
+    width: 100px;
     top: -15px;
   }
-  header .down a.btn-reser {
+  header .menu-fix a.btn-reservation {
     display: none;
   }
-  header .down .btn-menu .text {
+  header .menu-fix .btn-menu .text {
     display: none;
   }
-  header .down .btn-menu .gnb-close {
+  header .menu-fix .btn-menu .gnb-close {
     display: none;
   }
   .gnb-area {
@@ -1722,6 +1723,9 @@ main {
 @media screen and (max-width: 958px) {
   .sc-car {
     height: 120vh;
+  }
+  .sc-car .top-glow {
+    left: -14%;
   }
   .sc-car .top-glow img {
     width: 65%;

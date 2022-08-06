@@ -1,6 +1,6 @@
 $(function(){
 
-    $('header a.btn-reser, .gnb-area .gnb-item, .author-area .opentime, .sc-vision .btn-more').hover(
+    $('header a.btn-reservation, .gnb-area .gnb-item, .author-area .opentime, .sc-vision .btn-more').hover(
         function(){
             $(this).addClass('active');
         },
@@ -72,7 +72,7 @@ $(function(){
           
         
             intoTl.addLabel('m1')
-            .to('header .up',{yPercent:-300},'m1')
+            .to('header .top-menu',{yPercent:-300},'m1')
             .from('.ig-title',{scale: 24,top:'58%',left:'43%',duration:0.6},'m1')
             .from('.sc-main .mount img',{width: '220vw',yPercent:0,x:'-60vw'},'m1')
             .fromTo('.sc-main .title',{opacity:0},{yPercent:-30,opacity:1,},'m1+=0.4')
@@ -222,7 +222,7 @@ $(function(){
           
         
             intoTl.addLabel('m1')
-            .to('header .up',{yPercent:-300},'m1')
+            .to('header .top-menu',{yPercent:-300},'m1')
             .from('.ig-title',{scale: 16,top:'50%',left:'43%',duration:0.6},'m1')
             .from('.sc-main .mount img',{width: '230vw',yPercent:-20,x:'-40vw'},'m1')
             .fromTo('.sc-main .title',{opacity:0},{yPercent:-50,opacity:1,},'m1+=0.4')
@@ -367,7 +367,7 @@ $(function(){
           
         
             intoTl.addLabel('m1')
-            .to('header .up',{yPercent:-300},'m1')
+            .to('header .top-menu',{yPercent:-300},'m1')
             .from('.ig-title',{scale: 16,top:'50%',left:'43%',duration:0.6},'m1')
             .from('.sc-main .mount img',{width: '230vw',yPercent:-20,x:'-40vw'},'m1')
             .fromTo('.sc-main .title',{opacity:0},{yPercent:-50,opacity:1,},'m1+=0.4')
@@ -513,7 +513,7 @@ $(function(){
           
         
             intoTl.addLabel('m1')
-            .to('header .up',{yPercent:-300},'m1')
+            .to('header .top-menu',{yPercent:-300},'m1')
             .from('.ig-title',{scale: 9.5,top:'45%',left:'40%',duration:0.6},'m1')
             .from('.sc-main .mount img',{width: '230vw',yPercent:-20,x:'-70vw'},'m1')
             .fromTo('.sc-main .title',{opacity:0},{yPercent:-120,opacity:1,},'m1+=0.4')
@@ -662,7 +662,7 @@ $(function(){
           
         
             intoTl.addLabel('m1')
-            .to('header .up',{yPercent:-300},'m1')
+            .to('header .top-menu',{yPercent:-300},'m1')
             .from('.ig-title',{scale: 9.5,top:'45%',left:'40%',duration:0.6},'m1')
             .from('.sc-main .mount img',{width: '230vw',yPercent:-20,x:'-70vw'},'m1')
             .fromTo('.sc-main .title',{opacity:0},{yPercent:-200,opacity:1,},'m1+=0.4')
@@ -848,19 +848,19 @@ $(function(){
 
         
         if (e.target.closest('a, button')) {
-            $('.cir').addClass('active');
-            $('.cir').removeClass('hide');
-            gsap.to('.green-cir', {
+            $('.circle').addClass('active');
+            $('.circle').removeClass('hide');
+            gsap.to('.green-circle', {
                 scale: 0,
             })
         } else if(cirMove == 0) {
-            $('.cir').addClass('hide');
-            gsap.to('.green-cir', {
+            $('.circle').addClass('hide');
+            gsap.to('.green-circle', {
                 scale: 1,
             })
         } else {
-            $('.cir').removeClass('active');
-            gsap.to('.green-cir', {
+            $('.circle').removeClass('active');
+            gsap.to('.green-circle', {
                 scale: 1,
             })
         }
@@ -870,12 +870,12 @@ $(function(){
         var cirActive = $(window).scrollTop();
 
         if (cirActive == 0) {
-            $('.green-cir').removeClass('hide');
-            $('.cir').addClass('hide');
+            $('.green-circle').removeClass('hide');
+            $('.circle').addClass('hide');
         } else {
-            $('.green-cir').addClass('hide');
-            $('.cir').removeClass('hide');
-            $('.cir').removeClass('active');
+            $('.green-circle').addClass('hide');
+            $('.circle').removeClass('hide');
+            $('.circle').removeClass('active');
         }
     });
 
@@ -884,17 +884,17 @@ $(function(){
         var removeGnb = $(window).scrollTop();
         // console.log(wheel);
         if (removeGnb <= 2000) {
-            $('header .down').removeClass('on');
+            $('header .menu-fix').removeClass('on');
         } else if (wheel > 0) {
-            $('header .down').addClass('on');
-        } else {
-            $('header .down').removeClass('on');
+            $('header .menu-fix').addClass('on');
+        } else if ($('.gnb-area').hasClass('active') == false && wheel < 0){
+            $('header .menu-fix').removeClass('on');
         }
     });
     $(window).resize(function(){
         // width값을 가져오기
         // var width_size = window.outerWidth;
-          location.reload();
+        location.reload();
     })
     
     document.body.style.overscrollBehaviorY = 'none';
