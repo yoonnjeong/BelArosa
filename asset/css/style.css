@@ -379,12 +379,15 @@ header .menu-fix.on {
   opacity: 1;
 }
 header .menu-fix .logo {
-  height: 80px;
-  width: 110px;
   position: absolute;
   top: 0px;
   left: 50%;
   transform: translateX(-50%);
+}
+header .menu-fix .logo a {
+  display: block;
+  height: 80px;
+  width: 110px;
   background-image: url(../images/BelArosa_Chalet_Logo_Neg_Beige_02.svg);
   background-size: 100% 100%;
   background-repeat: no-repeat;
